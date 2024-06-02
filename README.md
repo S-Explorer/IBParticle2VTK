@@ -24,7 +24,15 @@ python ParticlePath.py IB_particle_1.csv
 
 ```shell
 # python_executable *.py Particle_csv_file_part time_step 
-python ParticlePath.py IB_particle 100
+python ParticlesTimeStep.py IB_particle 100
 #generate Particle[time].vtk, all the particle infomation at same time
+```
+
+### 3.Read Log info
+
+```shell
+# python_executable *.py logFile
+python parseLogInfo.py log
+#generate TimeStepLevel's cell, max uvw, coarse time
 ```
 
