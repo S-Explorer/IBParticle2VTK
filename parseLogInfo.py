@@ -2,7 +2,7 @@ import re
 import sys
 
 # [Level 1 step 1] Advanced 32768 cells
-LevelCells = re.compile(r'\[Level ([0-9]) step ([0-9])\] Advanced (\d+) cells')
+LevelCells = re.compile(r'\[Level ([0-9]) step (\d+)\] Advanced (\d+) cells')
 # max(abs(u/v/w))  = 2.513031039e-08  2.376070415e-08  1.12222
 MaxVelocity = re.compile(r'max\(abs\(u/v/w\)\)\s*=\s*(\d\.\d+e?.\d+)\s*(\d\.\d+e?.\d+)\s*(\d\.\d+e?.\d+)\s*')
 # [STEP 1] Coarse TimeStep time: 1.714825182
