@@ -40,8 +40,13 @@ def writeTimeStepFile(time, X, Y, Z, U, V, W, Fx, Fy, Fz):
         out.write('VERTICES ' + str(particleNum) + ' ' + str(particleNum * 2) + '\n')
         for i in range(0, particleNum, 1):
             out.write('1 ' + str(i) + '\n')
-        # write velocity data
-        out.write('\nPOINT_DATA '+ str(particleNum) + '\nFIELD FieldData 2\n')
+        
+        ## particle porperties
+        out.write('\nPOINT_DATA '+ str(particleNum) + '\nFIELD FieldData 3\n')
+        # write particle's id
+        out.write('id 1 '+ str(particleNum) + 'int\n')
+        for i in range(0, particleNum, 1):
+            out.write(str(i) + '\n')
         out.write('v 3 ' + str(particleNum) + ' double\n')
         for i in range(0, particleNum, 1):
             out.write(str(U_m[i]) + ' ' + str(V_m[i]) + ' ' + str(W_m[i]) + '\n')
